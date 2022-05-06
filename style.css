@@ -418,8 +418,9 @@ header label{
 .newsletter form input[type="submit"]:hover{
     color:var(--pink);
 }
-.newsletter .buttons {
+.buttons {
     visibility: visible;
+    flex-wrap: wrap;
 }
 
 .review{
