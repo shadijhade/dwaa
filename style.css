@@ -1,0 +1,836 @@
+
+:root{
+    --purple:#63ca8f;
+    --pink:#00afef;
+    --gradient:linear-gradient(90deg,var(--purple), var(--pink));
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    font-family: 'DroidArabicKufiRegular';
+}
+
+*::selection{
+    background:var(--pink);
+    color:#fff;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:#fcfcfc;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+section{
+    min-height: 100vh;
+    padding:0 10%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.1rem .9rem;
+    border-radius: 30px;
+    background: #223945 ;
+    font-size: 2.5rem;
+    color:#fff;
+    cursor: pointer;
+    box-shadow:5px 5px 10px #e1e1e1,
+               -5px -5px 10px #ffffff;
+    transition: all .3s linear;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+
+}
+
+
+
+.btn:hover{
+    transform: scale(1.1);
+    background: #fcfcfc ;
+    color:#223945;
+    box-shadow:-5px -5px 10px #e1e1e1,
+               5px 5px 10px #ffffff;
+}
+
+
+header {
+
+    background: #223945;
+    
+    border-radius:0 0 20px 20px;
+    -webkit-box-shadow: -1px 10px 9px -9px rgba(81,81,81,0.67); 
+box-shadow: -1px 10px 9px -9px rgba(81,81,81,0.67);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+
+}
+
+header .logo .logo-img{
+ /* next to the text */
+    position: fixed;
+    padding:0;
+    margin:-5px;
+    top:0; right:0;
+    width: 15vh;
+    height: 15vh;
+    z-index: 2;
+    -webkit-box-shadow: 8px 7px 9px -5px #515151; 
+    box-shadow: 8px 7px 9px -5px #515151;
+    
+    border-radius: 50%;
+    
+    
+    
+}
+
+
+header .navbar a{
+    font-size: 1.75rem;
+    margin-left: 2rem;
+    color:#fcfcfc;
+    text-decoration: none;
+    transition: all .1s linear;
+    font-family: 'Droid Arabic Kufi', serif;
+       
+}
+
+header .navbar a:hover{
+    color:var(--pink);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 3rem;
+    color:#fcfcfc;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#fcfcfc;
+    background-position: top right;
+    background-image: url(images/background.gif) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.home .image img{
+    width:44vw;
+    animation: float 4.6s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(2rem);
+    }
+    50%{
+        transform: translateY(-6.5rem);
+    }
+}
+
+.home .content h3{
+    font-size: 3.0rem;
+    font-weight: 900;
+    color:#223945;
+    text-transform: uppercase;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+
+.home .content h3 span{
+    color:#01aceb;
+    text-transform: uppercase;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+
+.home p{
+    font-size: 2.0rem;
+    font-weight: 700;
+    color:black;
+    padding:1rem 0;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+.features {
+    background-color: #fcfcfc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    border:.1rem solid rgba(255, 255, 255, 0.2);
+
+}
+.features h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    color:#223945;
+    text-transform: uppercase;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    text-align: center;
+}
+.features .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.features .box-container .box{
+    flex:1 1 40rem;
+    background-color:#fcfcfc;
+    backdrop-filter: blur(20px);
+    border-radius: 270px;
+    border:.1rem solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin:2rem;
+    padding:0;
+    text-align: center;
+    transition: .2s linear;
+}
+
+
+.features .box-container .box img{
+    position: absolute;
+    padding: 0;
+    margin: 0%;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius: 270px;
+    z-index: -1;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    object-fit: cover;
+       
+}
+
+.features .box-container .box h3{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color:#223945;
+    margin-top: 12rem;
+    margin-bottom: 0rem;
+    font-family:'Droid Arabic Kufi';
+    position: relative;
+    z-index: 1;
+    
+    
+    
+}
+
+.features .box-container .box p{
+    font-size: 1.75rem;
+    padding: 0.5rem 0.5rem;
+    color:#223945;
+    margin-top: 1rem;
+    margin-bottom: 12rem;
+    font-family:'Droid Arabic Kufi', bold; 
+    position: relative; 
+    z-index: 1;
+}  
+
+.about {
+    background-color: #fcfcfc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    border:.1rem solid rgba(255, 255, 255, 0.2)
+
+}
+
+.about h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    color:#223945;
+    text-transform: uppercase;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    text-align: center;
+}
+
+
+.about .column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+
+.about .column .image{
+    flex:1 1 40rem;
+    width:44vw;
+    animation: leftright 3.6s linear infinite;
+}
+
+
+@keyframes leftright{
+    0%, 100%{
+        transform: translatex(2rem);
+    }
+    50%{
+        transform: translatex(-1.30rem);
+    }
+}
+
+
+.about .column .image img{
+    width:90%;
+}
+
+.about .column .content {
+    flex: 1 1 40vh;
+    background-color: #fcfcfc;
+    border-radius: 20px;
+    border: .1rem solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    margin: 10rem;
+    padding: 2rem 2rem;
+    text-align: center;
+    transition: .2s linear;
+}
+.about .column .content h3{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color:#223945;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    margin: 5rem;
+    text-align: right;
+}
+
+.about .column .content p{
+    font-size: 1.75rem;
+    color:#223945;
+    margin: 0rem;
+    padding: 0.5rem 0.5rem;
+    text-align: right;
+    
+}
+
+.about .column .buttons .btn {
+    margin-left: 2.5rem;
+   
+}
+
+
+
+.newsletter{
+    text-align: center;
+    padding:5rem 1rem;
+    background-color:#fcfcfc;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+
+.newsletter h3{
+    font-size: 3.5rem;
+    font-weight: 900;
+    color:#223945;
+    text-transform: uppercase;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    text-align: center;
+}
+
+.newsletter p{
+    font-size: 1.75rem;
+    padding: 0.5rem 0.5rem;
+    color:#223945;
+    margin-top: 1rem;
+    margin-bottom: 12rem;
+    font-family:'Droid Arabic Kufi', bold; 
+    position: relative; 
+    z-index: 1;
+}
+
+.newsletter form{
+    display: flex;
+    max-width: 70rem;
+    border:.2rem solid #333;
+    padding:.5rem;
+    border-radius: 5rem;
+    margin:2rem auto;
+    height:5.5rem;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+
+
+.newsletter form input[type="email"]{
+    padding:0 2rem;
+    font-size: 1.75rem;
+    background:none;
+    width:100%;
+    color:rgb(86, 86, 86);
+    text-transform: none;
+    background:none;
+    border:none;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    
+    
+}
+
+.newsletter form input[type="email"]::placeholder{
+    color:rgb(86, 86, 86);;
+    text-transform: capitalize;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    
+}
+
+.newsletter form input[type="submit"]{
+    background:#fff;
+    width:20rem;
+    font-size: 1.7rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    
+}
+
+.newsletter form input[type="submit"]:hover{
+    color:var(--pink);
+}
+.newsletter .buttons {
+    visibility: visible;
+}
+
+.review{
+    background-color: #fcfcfc;
+}
+.review h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    color:#223945;
+    text-transform: uppercase;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    text-align: center;
+}
+
+
+.review .box-container{
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.review .box-container .box{
+    background-color: #fcfcfc;
+    border-radius: 20px;
+    border: .1rem solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    text-align: center;
+    transition: .2s linear;
+    margin:0.5rem;
+    padding:1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    flex:1 1 25rem;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+
+.review .box-container .box .user img{
+    border-radius: 0%;
+    background-color: transparent;
+    object-fit: cover;
+    height: 15rem;
+    width: 15rem;
+    margin-top: 1rem;
+    border: .1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.review .box-container .box .user h3{
+    color:#223945;
+    font-size: 2.5rem;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+
+
+.review .box-container .box .comment{
+    color:#223945;
+    font-size: 1.75rem;
+    padding:1rem;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+}
+
+
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
+    
+}
+
+.contact .image{
+    flex:1 1 40rem;
+}
+
+.contact .image img{
+    width:100%;
+    height: 100%;
+    padding:0rem;
+    size: 150%;
+}
+
+.contact form{
+    flex:1 1 40rem;
+    padding:2rem 3rem;
+    border:.1rem solid rgba(183, 181, 181, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    background:#fff;
+    border-radius: 40px;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    
+    
+}
+
+.contact form .heading{
+    text-align: left;
+    padding:0;
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+    color:#223945;
+    text-align: center;
+}
+
+.contact form .inputBox{
+    position: relative;
+}
+
+.contact form .inputBox input, .contact form .inputBox textarea{
+    width:100%;
+    background:none;
+    color:#666;
+    margin:1.5rem 0;
+    padding:.5rem 0;
+    font-size: 1.7rem;
+    border-bottom: .1rem solid rgba(0,0,0,.1);
+    text-transform: none;
+    
+    
+    
+}
+
+.contact form .inputBox textarea{
+    resize: none;
+    height: 13rem;
+    
+}
+
+.contact form .inputBox label{
+    position: absolute;
+    top:1.7rem; left:0;
+    font-size: 1.5rem;
+    color:#223945;
+    
+    
+}
+
+.contact form .inputBox input:focus ~ label,
+.contact form .inputBox input:valid ~ label,
+.contact form .inputBox textarea:focus ~ label,
+.contact form .inputBox textarea:valid ~ label{
+    top:-.5rem;
+    font-size: 1.5rem;
+    color:var(--pink);
+    
+}
+
+.footer{
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    background-color: #223945;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+    margin:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:#fff;
+    text-decoration: underline;
+    
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    padding:.5rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.75rem;
+    padding:.5rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .box-container .box .info{
+    display: flex;
+    align-items: center;
+}
+
+.footer .box-container .box .info i{
+    margin:.5rem 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background:rgb(255, 255, 255);
+    color:#223945;
+    font-size: 1.5rem;
+    height:4.5rem;
+    width:4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    color:#fff;
+    border-top: .1rem solid #fff5;
+    padding:2.5rem 1rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:1200px){
+    
+    html{
+        font-size: 50%;
+    }
+    
+
+}
+
+@media (max-width:991px){
+    
+    section{
+        padding:0 3%;
+        padding-top: 7.5rem;
+        padding-bottom: 2rem;
+    }
+  
+}
+
+@media (max-width:768px){
+   
+
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left: 0;
+        width:100%;
+        background-color: #406c84;
+        padding:1rem 2rem;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
+        z-index: 1;
+        border-radius: 20px;
+        
+    }
+
+    header .navbar a{
+        display: block;
+        margin:2rem 0;
+        font-size: 2rem;
+        text-align: center;
+        color:#fcfcfc;
+        
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before{
+        content:'\f00d';
+    }
+
+    .home{
+        flex-flow: column-reverse;
+    }
+
+    .home .image img{
+        width:100%;
+    }
+
+    .home .content h3{
+        font-size: 2.5rem;
+    }
+
+    .home .content p{
+        font-size: 1.75rem;
+    }
+
+    .about{
+        background-position: center;
+    }
+
+    .newsletter p{
+        width:auto;
+    }
+    
+
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+    .btn1{
+        background: var(--purple) ;
+        color: #fcfcfc;
+        padding:1rem 1rem;
+        padding-right: 0;
+        padding-bottom: 10px;
+        position: fixed;
+        top: 88%;
+        left:19%;
+        font-size: 4.5rem;
+        display: inline-block;
+        z-index: 2;
+        border-radius:70px 70px 0 0 ;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        animation:brath 8s  linear infinite;
+        visibility: visible;
+        -webkit-box-shadow: -1px -15px 9px -14px rgba(81,81,81,0.67); 
+box-shadow: -1px -15px 9px -14px rgba(81,81,81,0.67);
+        
+    
+    }
+    .btn2{
+        background: var(--pink) ;
+        color: #fcfcfc;
+        padding:1rem 1rem;
+        padding-bottom: 10px;
+        position: fixed;
+        top: 88%;
+        left:3%;
+        font-size: 4.55rem;
+        animation:brath 8s  linear infinite;
+        display: inline-block;
+        z-index: 2;
+        border-radius:70px 70px 0 0 ;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        visibility: visible;
+        -webkit-box-shadow: -1px -15px 9px -14px rgba(81,81,81,0.67); 
+box-shadow: -1px -15px 9px -14px rgba(81,81,81,0.67);
+        
+    
+    
+    
+    }
+    @keyframes brath{
+        0%{transform: scale(.9);}
+        25%{transform: scale(1);}
+        60%{transform: scale(.9);}
+        100%{transform: scale(1);}
+    }
+    
+  
+    
+  header .logo .logo-img {
+      margin: -5px;
+      top: 10px;
+      right: 0;
+      width: 11vh;
+      height: 11vh;
+      border-radius: 0 0 50% 50%;
+    }
+    .home{
+        
+        background-size: 110%;
+
+    }
+    .features{
+        background-image: url(images/bgbg.svg);
+        background-size: fill;
+        background-color: #fcfcfc;
+        
+        
+    }
+    .about .column .content .buttons { 
+        margin: 0;
+        padding: 0;
+        font-size: 3.5rem;
+       
+    }
+    .about .column .content {
+        margin: 0.1rem;
+        padding: 1.5rem 1.5rem;
+        
+    }
+    .newsletter .buttons {
+        visibility: visible;
+    }
+    
+    
+}
